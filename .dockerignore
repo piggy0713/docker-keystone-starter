@@ -1,0 +1,6 @@
+.git/
+docs/
+dist/
+docker
+!docker/start.sh
+.env

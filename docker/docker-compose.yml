@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    keystone:
+        tty: true
+        stdin_open: true
+        environment:
+            PORT: ${KEYSTONE_PORT}
+            DOCKER_DEFAULT_PLATFORM: ${DOCKER_DEFAULT_PLATFORM}
+        volumes:
+            - keystone_node_modules:/app/node_modules
+        ports:
+            - ${KEYSTONE_PORT}:${KEYSTONE_PORT}
+volumes:
+    keystone_node_modules:
